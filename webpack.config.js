@@ -47,14 +47,24 @@ module.exports = {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: 'react-hot!babel-loader'
-    }, {
+    },
+    {
       test: /\.scss/,
       //?后方为配置项
-      loader: 'style-loader!css-loader!auto-prefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader!auto-prefixer-loader?{browsers:["last 2 version"]}'
-    }, {
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
+    },
+    // {
+    //   test: /\.scss/,
+    //   //?后方为配置项
+    //   loader: 'style-loader!css-loader'
+    // }, {
+    //   test: /\.css$/,
+    //   loader: 'style-loader!css-loader'
+    // },
+     {
       test:/\.json$/,
       loader:'json-loader'
     },
